@@ -800,7 +800,6 @@ outline: transparent;
 
 .review-form-message::placeholder {
 color: var(--primary-color, rgba(46, 47, 66, 0.40));
-
 }
 
 .review-form-message:focus {
