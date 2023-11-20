@@ -646,7 +646,7 @@ left: 0;
 top: 0;
 width: 100%;
 height: 100%;
-background-color: var(--primary-color, rgba(46, 47, 66, 0.40));
+background-color: rgba(46, 47, 66, 0.40);
 z-index: 99999;
 opacity: 0;
 visibility: hidden; 
@@ -654,7 +654,7 @@ pointer-events: none;
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop-is-open {
+.is-open {
 opacity: 1;
 visibility: visible;
 pointer-events: auto;
@@ -667,8 +667,8 @@ min-height: 584px;
 background-color: #FCFCFC;
 border-radius: 4px;
 position: absolute;
-left: 50%;
 top: 50%;
+left: 50%;
 transform: translate(-50%, -50%);
 padding-top: 72px;
 padding-left: 24px;
@@ -702,12 +702,24 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 
 .modal-close-button:hover,
 .modal-close-button:focus {
-fill: var(--second-color);
+fill: var(--hover-focus-color);
 border: none;
 }
 
 .modal-close-btn-icon {
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-description {
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--primary-color);
+width: 100%;
+margin-bottom: 16px;
+margin-top: 0;
 }
 
 .review-form-field-label {
@@ -724,7 +736,7 @@ margin-bottom: 4px;
 width: 100%;
 height: 40px;
 border-radius: 4px;
-border: 1px solid var(--primary-color, rgba(46, 47, 66, 0.40));
+border: 1px solid rgba(46, 47, 66, 0.40);
 background-color: #FCFCFC;
 padding-left: 38px;
 background-color: transparent;
@@ -745,6 +757,11 @@ transform: translateY(-50%);
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.review-form-field-icon:hover .review-form-field-icon:focus {
+fill: var(--accent-color);
+}
+
+
 .review-form-input-wrapper {
 position: relative;
 }
@@ -755,8 +772,8 @@ outline-offset: 4px;
 border-color: var(--accent-color);
 }
 
-.review-form-field:focus+.review-form-field-icon {
-fill: var(--accent-colo);
+.review-form-field:focus .review-form-field-icon:hover {
+fill: var(--accent-color);
 }
 
 .review-form-field-wrapper-text {
@@ -771,14 +788,14 @@ margin-bottom: 8px;
 width: 100%;
 height: 120px;
 border-radius: 4px;
-border: 1px solid var(--primary-color, rgba(46, 47, 66, 0.40));
+border: 1px solid rgba(46, 47, 66, 0.40);
 resize: none;
 padding: 8px 16px;
 font-size: 12px;
 font-weight: 400;
 line-height: 1.17;
 letter-spacing: 0.04em;
-color: var(--primary-color, rgba(46, 47, 66, 0.40));
+color: rgba(46, 47, 66, 0.40);
 margin-bottom: 8px;
 background-color: transparent;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -853,7 +870,11 @@ overflow: hidden;
 
 .review-form-button {
 border-radius: 4px;
+color: var(--second-color);
 background: var(--accent-color);
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.04em;
 border: none;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 min-width: 169px;
