@@ -768,7 +768,7 @@ border-color: var(--accent-color);
 }
 
 .review-form-field:focus+.review-form-field-icon {
-fill: #4D5AE5;
+fill: var(--accent-color);
 }
 
 .review-form-field-wrapper-text {
@@ -879,4 +879,8 @@ display: block;
 padding: 16px 32px;
 margin: 0 auto;
 width: 105px;
+}
+
+.review-form-button:hover, .review-form-button:focus {
+background-color: var(--hover-focus-color);
 }
